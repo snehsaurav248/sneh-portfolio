@@ -39,6 +39,14 @@ const Header = ({ onSectionChange }) => {
           >
             Contact
           </span>
+          <a
+            href="/resumes/sneh-saurav-specialised-cv-12113521.pdf" // Update this path to your resume file
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-300 transition-colors text-lg font-bold"
+          >
+            Resume
+          </a>
         </nav>
       </div>
     </header>

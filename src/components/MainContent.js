@@ -1,20 +1,25 @@
+// src/components/MainContent.js
 import React from 'react';
 import { motion } from 'framer-motion';
+import Header from './Header'; // Import Header
 import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
 
-const MainContent = ({ currentSection }) => {
+const MainContent = ({ currentSection, onSectionChange }) => {
   return (
     <div className="relative min-h-screen">
+      {/* Include Header at the top */}
+      <Header onSectionChange={onSectionChange} />
+
       {/* Show sections with their respective background images */}
       {currentSection === 'about' && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="min-h-screen flex items-center justify-center"
+          className="min-h-screen flex items-center justify-center mt-16" // Adjust margin for header
         >
           <About />
         </motion.div>
@@ -24,7 +29,7 @@ const MainContent = ({ currentSection }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="min-h-screen flex items-center justify-center"
+          className="min-h-screen flex items-center justify-center mt-16" // Adjust margin for header
         >
           <Skills />
         </motion.div>
@@ -34,7 +39,7 @@ const MainContent = ({ currentSection }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="min-h-screen flex items-center justify-center"
+          className="min-h-screen flex items-center justify-center mt-16" // Adjust margin for header
         >
           <Projects />
         </motion.div>
@@ -44,7 +49,7 @@ const MainContent = ({ currentSection }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="min-h-screen flex items-center justify-center"
+          className="min-h-screen flex items-center justify-center mt-16" // Adjust margin for header
         >
           <Contact />
         </motion.div>
