@@ -1,4 +1,3 @@
-// src/components/MainContent.js
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from './Header'; // Import Header
@@ -7,6 +6,7 @@ import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
 import Home from './Home'; // Import Home
+import ResumeLink from './ResumeLink'; // Import ResumeLink
 
 const MainContent = ({ currentSection, onSectionChange }) => {
   return (
@@ -65,6 +65,16 @@ const MainContent = ({ currentSection, onSectionChange }) => {
           className="min-h-screen flex items-center justify-center mt-16" // Adjust margin for header
         >
           <Contact />
+        </motion.div>
+      )}
+      {currentSection === 'resume-link' && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="min-h-screen flex items-center justify-center mt-16" // Adjust margin for header
+        >
+          <ResumeLink />
         </motion.div>
       )}
     </div>

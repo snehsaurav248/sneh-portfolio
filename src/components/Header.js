@@ -79,6 +79,17 @@ const Header = ({ onSectionChange }) => {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link
+                to="resume-link"
+                smooth={true}
+                duration={500}
+                onClick={() => handleClick('resume-link')}
+                className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer"
+              >
+                Resume
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

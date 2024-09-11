@@ -7,6 +7,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Home from './components/Home'; // Import Home component
+import ResumeLink from './components/ResumeLink'; // Import ResumeLink component
 import { motion } from 'framer-motion';
 import './App.css'; // Ensure you import your global CSS if needed
 
@@ -58,7 +59,7 @@ const App = () => {
         )}
         
         <div className="relative z-10">
-          {currentSection === 'home' && ( // Render Home when currentSection is 'home'
+          {currentSection === 'home' && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -106,6 +107,16 @@ const App = () => {
               className="min-h-screen"
             >
               <Contact />
+            </motion.div>
+          )}
+          {currentSection === 'resume-link' && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="min-h-screen"
+            >
+              <ResumeLink />
             </motion.div>
           )}
         </div>

@@ -1,6 +1,6 @@
 // src/components/Home.js
 import React, { useState } from 'react';
-import { MailOutlined, LinkedinOutlined, GithubOutlined, FilePdfOutlined } from '@ant-design/icons'; // Import icons
+import { MailOutlined, LinkedinOutlined, GithubOutlined, FilePdfOutlined, GlobalOutlined } from '@ant-design/icons'; // Import icons
 
 const Home = () => {
   const [showCredentials, setShowCredentials] = useState(false); // State to manage credentials visibility
@@ -43,8 +43,12 @@ const Home = () => {
               <GithubOutlined className="text-3xl" />
             </a>
             {/* Resume */}
-            <a href="/assets/sneh-saurav-specialised-cv-12113521" className="hover:text-yellow-500 transition-colors" aria-label="Resume">
+            <a href="/assets/sneh-saurav-specialised-cv-12113521.pdf" className="hover:text-yellow-500 transition-colors" aria-label="Resume">
               <FilePdfOutlined className="text-3xl" />
+            </a>
+            {/* LeetCode */}
+            <a href="https://leetcode.com/u/snehsauravv248//" className="hover:text-yellow-500 transition-colors" aria-label="LeetCode">
+              <GlobalOutlined className="text-3xl" /> {/* Replace with LeetCode icon if available */}
             </a>
           </div>
         )}
