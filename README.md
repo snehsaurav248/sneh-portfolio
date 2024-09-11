@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -73,3 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # sneh-portfolio
 Welcome to my portfolio! I'm Sneh Saurav, a passionate full-stack developer specializing in the MERN stack. With a strong foundation in web development and experience in database management, I craft innovative solutions and dynamic web applications. Explore my projects and connect with me to see how we can collaborate!"
 >>>>>>> 14b98838a89204de093455a81cbb06b78f5640fe
+=======
+# sneh-portfolio
+Welcome to my portfolio! I'm Sneh Saurav, a passionate full-stack developer specializing in the MERN stack. With a strong foundation in web development and experience in database management, I craft innovative solutions and dynamic web applications. Explore my projects and connect with me to see how we can collaborate!"
+>>>>>>> origin/master
