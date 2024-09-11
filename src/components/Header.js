@@ -1,52 +1,85 @@
 // src/components/Header.js
 import React from 'react';
+import { Link } from 'react-scroll';
 
 const Header = ({ onSectionChange }) => {
-  return (
-    <header 
-      className="bg-blue-600 text-white py-4 fixed top-0 w-full z-50 shadow-md"
-      style={{ backgroundImage: 'url(/assets/de-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
-    >
-      <div className="container mx-auto flex justify-between items-center px-6">
-        {/* Logo or Brand Name */}
-        <div className="text-2xl font-bold">
-          My Portfolio
-        </div>
+  const handleClick = (sectionId) => {
+    onSectionChange(sectionId);
+    localStorage.setItem('currentSection', sectionId); // Save section to localStorage
+  };
 
-        {/* Navigation Links */}
-        <nav className="flex space-x-12">
-          <span
-            onClick={() => onSectionChange('about')}
-            className="cursor-pointer hover:text-gray-300 transition-colors text-lg font-bold"
+  return (
+    <header className="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg z-50">
+      <div className="container mx-auto flex justify-between items-center p-4 h-16">
+        <div className="text-xl font-extrabold tracking-wide">
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            onClick={() => handleClick('home')}
+            className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer"
           >
-            About
-          </span>
-          <span
-            onClick={() => onSectionChange('skills')}
-            className="cursor-pointer hover:text-gray-300 transition-colors text-lg font-bold"
-          >
-            Skills
-          </span>
-          <span
-            onClick={() => onSectionChange('projects')}
-            className="cursor-pointer hover:text-gray-300 transition-colors text-lg font-bold"
-          >
-            Projects
-          </span>
-          <span
-            onClick={() => onSectionChange('contact')}
-            className="cursor-pointer hover:text-gray-300 transition-colors text-lg font-bold"
-          >
-            Contact
-          </span>
-          <a
-            href="/resumes/sneh-saurav-specialised-cv-12113521.pdf" // Update this path to your resume file
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-300 transition-colors text-lg font-bold"
-          >
-            Resume
-          </a>
+            Sneh Saurav
+          </Link>
+        </div>
+        <nav>
+          <ul className="flex space-x-4 text-sm">
+            <li>
+              <Link
+                to="home"
+                smooth={true}
+                duration={500}
+                onClick={() => handleClick('home')}
+                className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                onClick={() => handleClick('about')}
+                className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="skills"
+                smooth={true}
+                duration={500}
+                onClick={() => handleClick('skills')}
+                className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer"
+              >
+                Skills
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                onClick={() => handleClick('projects')}
+                className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer"
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                onClick={() => handleClick('contact')}
+                className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer"
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>

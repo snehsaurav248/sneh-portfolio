@@ -1,16 +1,25 @@
 // src/App.js
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Home from './components/Home'; // Import Home component
 import { motion } from 'framer-motion';
 import './App.css'; // Ensure you import your global CSS if needed
 
 const App = () => {
-  const [currentSection, setCurrentSection] = useState(null);
+  // Initialize state with local storage value or default to null
+  const [currentSection, setCurrentSection] = useState(() => {
+    return localStorage.getItem('currentSection') || null;
+  });
+
+  // Update local storage whenever currentSection changes
+  useEffect(() => {
+    localStorage.setItem('currentSection', currentSection);
+  }, [currentSection]);
 
   const handleSectionChange = (sectionId) => {
     setCurrentSection(sectionId);
@@ -49,6 +58,16 @@ const App = () => {
         )}
         
         <div className="relative z-10">
+          {currentSection === 'home' && ( // Render Home when currentSection is 'home'
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="min-h-screen"
+            >
+              <Home />
+            </motion.div>
+          )}
           {currentSection === 'about' && (
             <motion.div
               initial={{ opacity: 0 }}

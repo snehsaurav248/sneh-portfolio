@@ -6,12 +6,25 @@ import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
+import Home from './Home'; // Import Home
 
 const MainContent = ({ currentSection, onSectionChange }) => {
   return (
     <div className="relative min-h-screen">
       {/* Include Header at the top */}
       <Header onSectionChange={onSectionChange} />
+
+      {/* Show Home component when no section is selected */}
+      {!currentSection && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="min-h-screen flex items-center justify-center mt-16" // Adjust margin for header
+        >
+          <Home />
+        </motion.div>
+      )}
 
       {/* Show sections with their respective background images */}
       {currentSection === 'about' && (
