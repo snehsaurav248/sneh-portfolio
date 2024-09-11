@@ -18,7 +18,7 @@ const Skills = () => {
       }}
     >
       {/* Background overlay */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-60"></div>
       
       {/* Skills content */}
       <div className="relative container mx-auto text-center z-10">
@@ -38,10 +38,10 @@ const Skills = () => {
         </p>
         
         {/* Skill cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {/* Skill Card 1: Languages */}
           <motion.div 
-            className="p-8 bg-white shadow-lg rounded-xl flex items-center justify-start space-x-4 hover:scale-105 transition-transform"
+            className="p-6 bg-white shadow-lg rounded-xl flex flex-col items-center justify-start space-y-4 text-center hover:scale-105 transition-transform duration-300 overflow-hidden"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -55,7 +55,7 @@ const Skills = () => {
           
           {/* Skill Card 2: Technologies/Frameworks */}
           <motion.div 
-            className="p-8 bg-white shadow-lg rounded-xl flex items-center justify-start space-x-4 hover:scale-105 transition-transform"
+            className="p-6 bg-white shadow-lg rounded-xl flex flex-col items-center justify-start space-y-4 text-center hover:scale-105 transition-transform duration-300 overflow-hidden"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -69,7 +69,7 @@ const Skills = () => {
 
           {/* Skill Card 3: Skills */}
           <motion.div 
-            className="p-8 bg-yellow-50 shadow-lg rounded-xl flex items-center justify-start space-x-4 hover:scale-105 transition-transform"
+            className="p-6 bg-yellow-50 shadow-lg rounded-xl flex flex-col items-center justify-start space-y-4 text-center hover:scale-105 transition-transform duration-300 overflow-hidden"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
@@ -83,7 +83,7 @@ const Skills = () => {
 
           {/* Skill Card 4: Coursework */}
           <motion.div 
-            className="p-8 bg-white shadow-lg rounded-xl flex items-center justify-start space-x-4 hover:scale-105 transition-transform"
+            className="p-6 bg-white shadow-lg rounded-xl flex flex-col items-center justify-start space-y-4 text-center hover:scale-105 transition-transform duration-300 overflow-hidden"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 1.2 }}
