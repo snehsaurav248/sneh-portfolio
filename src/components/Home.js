@@ -31,11 +31,11 @@ const Home = () => {
         {showCredentials && ( // Conditionally render the credentials section
           <div className="flex justify-center space-x-6 text-white mt-6">
             {/* Email */}
-            <a href="mailto:sneh.saurav@example.com" className="hover:text-yellow-500 transition-colors" aria-label="Email">
+            <a href="mailto:snehsauravv248@gmail.com" className="hover:text-yellow-500 transition-colors" aria-label="Email">
               <MailOutlined className="text-3xl" />
             </a>
             {/* LinkedIn */}
-            <a href="https://www.linkedin.com/in/snehsaurav" className="hover:text-yellow-500 transition-colors" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/snehsaurav248/" className="hover:text-yellow-500 transition-colors" aria-label="LinkedIn">
               <LinkedinOutlined className="text-3xl" />
             </a>
             {/* GitHub */}
@@ -43,7 +43,7 @@ const Home = () => {
               <GithubOutlined className="text-3xl" />
             </a>
             {/* Resume */}
-            <a href="/assets/SnehSaurav_Resume.pdf" className="hover:text-yellow-500 transition-colors" aria-label="Resume">
+            <a href="/assets/sneh-saurav-specialised-cv-12113521" className="hover:text-yellow-500 transition-colors" aria-label="Resume">
               <FilePdfOutlined className="text-3xl" />
             </a>
           </div>
